@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-site-deployment
+  labels:
+    app: customer-site
+spec:
+  selector:
+    matchLabels:
+      app: customer-site
+  template:
+    metadata:
+      labels:
+        app: customer-site
+    spec:
+      containers:
+      - name: myapp
+        image: $"${env.IMAGE_NAME}:${params.BUILD_NUMBER}"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5000
