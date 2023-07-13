@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: ${env.IMAGE_NAME}:${params.BUILD_NUMBER}
+        image: ${IMAGE_NAME}:${IMAGE_TAG}
         resources:
           limits:
             memory: "128Mi"
