@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: customer-site-deployment
-  namespace: test
+  namespace: customer-site
   labels:
     app: customer-site
 spec:

@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: customer-site-service
-  namespace: test
+  namespace: customer-site
 spec:
   selector:
     app: customer-site
