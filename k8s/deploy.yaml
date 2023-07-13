@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: customer-site-deployment
+  namespace: test
   labels:
     app: customer-site
 spec:
@@ -15,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: $"${env.IMAGE_NAME}:${params.BUILD_NUMBER}"
+        image: ${env.IMAGE_NAME}:${params.BUILD_NUMBER}
         resources:
           limits:
             memory: "128Mi"
