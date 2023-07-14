@@ -3,7 +3,7 @@ import mysql.connector as mysql
 from mysql.connector import Error
 from flask_wtf import FlaskForm
 from wtforms import SelectField
-import AUTH, helper
+import  helper
 import random
 
 app = Flask(__name__)
