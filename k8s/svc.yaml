@@ -9,3 +9,4 @@ spec:
   ports:
   - port: 50009
     targetPort: 5000
+  type: NodePort
