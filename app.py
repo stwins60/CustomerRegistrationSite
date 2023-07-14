@@ -12,9 +12,13 @@ symbol = "!@#$%^&*()_+"
 app.config['SECRET_KEY'] = random.sample(alpha_num+symbol, 16)
 error = None
 
+host = ""
+password = ""
+username = ""
+Database = ""
 
 try:
-    conn = mysql.connect(host=AUTH.host, user=AUTH.username, password=AUTH.password, database=AUTH.Database, connect_timeout=6000)
+    conn = mysql.connect(host=host, user=username, password=password, database=Database, connect_timeout=6000)
     cursor = conn.cursor()
     print("Connected to database")
 except Error as e:
