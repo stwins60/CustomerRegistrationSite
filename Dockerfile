@@ -7,11 +7,11 @@ COPY requirements.txt .
 
 RUN pip install -r requirements.txt --no-cache-dir
 
-RUN echo "host=''" > ./AUTH.py
-RUN echo "port=''" >> ./AUTH.py
-RUN echo "username=''" >> ./AUTH.py
-RUN echo "password=''" >> ./AUTH.py
-RUN echo "Database=''" >> ./AUTH.py
+# RUN echo "host=''" > ./AUTH.py
+# RUN echo "port=''" >> ./AUTH.py
+# RUN echo "username=''" >> ./AUTH.py
+# RUN echo "password=''" >> ./AUTH.py
+# RUN echo "Database=''" >> ./AUTH.py
 
 ENV PYTHONUNBUFFERED 1
 ENV FLASK_APP app.py
