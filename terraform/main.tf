@@ -13,7 +13,7 @@ resource "kubernetes_deployment" "customer-site-deployment" {
     }
   }
   spec {
-    replicas = 1
+    replicas = var.customer_site_replicas
     selector {
       match_labels = {
         app = "customer-site"
