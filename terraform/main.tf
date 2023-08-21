@@ -1,6 +1,6 @@
 resource "kubernetes_namespace" "customer-site" {
   metadata {
-    name = "customer-site"
+    name = "customer-site-${var.environment}"
   }
 }
 
