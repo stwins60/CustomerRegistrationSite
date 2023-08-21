@@ -15,5 +15,7 @@ variable "customer_site_external_port" {
 
 variable "customer_site_replicas" {
   description = " The number of customer site replicas"
-  default = 1
+  default     = 1
 }
+
+variable "environment" {}
