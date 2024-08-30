@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.12-slim
 
 WORKDIR /app
 
@@ -6,6 +6,8 @@ COPY . .
 COPY requirements.txt .
 
 RUN pip install -r requirements.txt --no-cache-dir
+
+RUN python -m pytest
 
 # RUN echo "host=''" > ./AUTH.py
 # RUN echo "port=''" >> ./AUTH.py

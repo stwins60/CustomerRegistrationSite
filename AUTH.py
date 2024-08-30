@@ -1,4 +1,0 @@
-host=""
-password=""
-username=""
-Database=""

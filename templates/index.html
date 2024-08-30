@@ -68,7 +68,13 @@
           <form>
             <hr class="mb-4">
             <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-          </form>
+          </form><br><br>
+          <hr>
+          {% if message %}
+            <div class="alert alert-success" role="alert">
+              {{ message }}
+            </div>
+          {% endif %}
       </div>
     </div>
     <footer class="my-5 pt-5 text-muted text-center text-small">

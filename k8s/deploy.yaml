@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: customer-site-deployment
-  namespace: customer-site
+  namespace: lab-demo
   labels:
     app: customer-site
 spec:
@@ -15,8 +15,8 @@ spec:
         app: customer-site
     spec:
       containers:
-      - name: myapp
-        image: ${IMAGE_NAME}:${IMAGE_TAG}
+      - name: customer-site
+        image: PLEASE_REPLACE_ME
         resources:
           limits:
             memory: "128Mi"

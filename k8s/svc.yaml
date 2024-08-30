@@ -2,11 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: customer-site-service
-  namespace: customer-site
+  namespace: lab-demo
 spec:
   selector:
     app: customer-site
   ports:
   - port: 50009
     targetPort: 5000
+    nodePort: 32301
   type: NodePort
